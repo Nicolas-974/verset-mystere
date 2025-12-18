@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Verset Biblique Aléatoire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            
+            <h1>Parole du Jour</h1>
+
+            <div id="loader" class="loader" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div id="verse-content" class="verse-text" aria-live="polite" role="status">
+                Cliquez sur le bouton pour recevoir un verset.
+            </div>
+            <div id="verse-reference" class="verse-ref"></div>
+            
+            <button id="generate-btn" class="btn">Nouveau Verset</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

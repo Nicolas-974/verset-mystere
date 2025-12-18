@@ -1,0 +1,209 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Couleur de secours si l'image ne charge pas */
+    background-color: #333; 
+    
+    /* On enlève l'image par défaut ici, car le JS va la mettre */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* --- CORRECTION ICI --- */
+    /* J'ai enlevé 'background-blend-mode: overlay' et 'background-color: #000' 
+       qui rendaient l'image invisible. */
+    
+    transition: background-image 0.5s ease-in-out;
+    position: relative;
+}
+/* Effet sombre pour améliorer la lisibilité sur l'image */
+/* Ce pseudo-élément crée un voile noir semi-transparent sur toute la page */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 = 50% d'opacité (ajustez selon vos goûts) */
+    z-index: -1; /* Très important : place le voile DERRIÈRE le texte */
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.card {
+    /* Fond noir semi-transparent (60% d'opacité) */
+    background-color: rgba(0, 0, 0, 0.6); 
+    
+    /* Effet de flou derrière la boite (Glassmorphism - très moderne) */
+    backdrop-filter: blur(5px);
+    
+    /* Bordure fine blanche pour délimiter */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Le texte DOIT être blanc */
+    color: #ffffff; 
+    
+    /* Vos autres réglages de marge/padding existants... */
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.verse-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    
+    /* Force le blanc pur */
+    color: #ffffff; 
+    
+    /* Ajoute une ombre noire derrière les lettres pour le contraste */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.verse-ref {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #8b0000; /* Rouge foncé liturgique */
+    margin-bottom: 2rem;
+}
+
+/* Ajoute une transition douce sur le conteneur du texte */
+#container, #verse-content, #verse-reference {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+/* Cette classe servira à cacher le texte pendant le chargement */
+.loading-content {
+    opacity: 0 !important;
+}
+
+.btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: sans-serif;
+}
+
+.btn:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Le conteneur des points */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Hauteur fixe pour éviter que la carte ne saute */
+    gap: 10px;     /* Espace entre les points */
+}
+
+/* Les petits points */
+.loader span {
+    width: 15px;
+    height: 15px;
+    background-color: #333; /* Couleur des points (adaptez selon votre fond) */
+    border-radius: 50%;
+    display: inline-block;
+    
+    /* L'animation magique */
+    animation: bounce 0.6s infinite alternate;
+}
+
+/* Décalage pour créer l'effet de vague */
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* L'animation : monte et devient un peu transparent */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-15px); /* Monte de 15px */
+        opacity: 0.5; /* Devient semi-transparent */
+    }
+}
+
+/* --- AJOUT POUR MOBILE (à la fin du fichier) --- */
+
+@media screen and (max-width: 768px) {
+    /* 1. Ajustement de la hauteur pour mobile (évite les bugs de barre d'adresse) */
+    body {
+        height: 100dvh; /* "dvh" s'adapte mieux aux mobiles que "vh" */
+        min-height: 500px; /* Sécurité pour les très petits écrans */
+    }
+
+    /* 2. La carte prend plus de place sur les côtés */
+    .card {
+        width: 95%;
+        padding: 1.5rem; /* On réduit un peu les marges internes */
+        margin: 10px;
+    }
+
+    /* 3. Texte un peu plus petit pour ne pas saturer l'écran */
+    h1 {
+        font-size: 1.5rem; /* Titre plus petit */
+        margin-bottom: 1rem;
+    }
+
+    .verse-text {
+        font-size: 1.2rem; /* Texte du verset lisible mais compact */
+        line-height: 1.4;
+    }
+
+    .verse-ref {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 4. Bouton plus facile à taper avec le doigt (plus gros) */
+    .btn {
+        width: 100%; /* Le bouton prend toute la largeur */
+        padding: 15px; /* Zone de touche plus grande */
+        font-size: 1.1rem;
+    }
+}
