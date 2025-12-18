@@ -11,19 +11,33 @@ let bibleData = null;
 // Chargement initial
 async function loadBible() {
     try {
+        // 1. On prévient l'utilisateur que ça charge
+        verseText.textContent = "Téléchargement de la Bible en cours... (Cela peut prendre quelques secondes)";
+        verseText.style.opacity = "0.7"; // Petit effet visuel
+        
         console.log("Début chargement Bible...");
         const response = await fetch('json/bible_lsg.json');
+        
         if (!response.ok) throw new Error("Erreur HTTP: " + response.status);
+        
         bibleData = await response.json();
+        
         console.log("Bible chargée !");
+        
+        // 2. C'est fini, on invite à cliquer
+        verseText.style.opacity = "1";
+        verseText.textContent = "La Bible est prête. Cliquez sur le bouton !";
         btn.disabled = false;
-        getVerse();
+        btn.textContent = "Découvrir un verset"; // Change le texte du bouton
+        
+        // Optionnel : Lancer un premier verset direct si tu veux
+        // getVerse(); 
+        
     } catch (error) {
         console.error("Erreur chargement Bible:", error);
-        verseText.textContent = "Erreur de chargement de la Bible.";
+        verseText.textContent = "Erreur : La connexion est trop lente pour télécharger la Bible.";
     }
 }
-
 loadBible();
 
 btn.addEventListener('click', getVerse);
