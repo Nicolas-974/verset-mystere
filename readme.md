@@ -2,13 +2,17 @@
 
 **Verset du Jour** est une application minimaliste et inspirante conçue pour offrir un moment de méditation quotidien. D'un simple clic, découvrez un verset biblique aléatoire sublimé par une ambiance visuelle apaisante.
 
-## 🌐 Essayer maintenant (PC & Mobile)
+## 🌐 Essayer maintenant (2 options)
 
-L'application est accessible directement depuis votre navigateur, que vous soyez sur un **ordinateur** ou un **téléphone**.
+### Option 1 : Version Web (PC & iPhone)
+Accessible directement depuis votre navigateur sans installation.
+👉 **[Cliquez ici pour ouvrir le site](https://nicolas-974.github.io/verset-mystere/)**
 
-👉 **[Cliquez ici pour ouvrir la version Web](https://nicolas-974.github.io/verset-mystere/)**
+### Option 2 : Application Android (APK)
+Pour une expérience ultra-rapide et 100% hors-ligne, installez l'application sur votre téléphone.
+👉 **[Télécharger le fichier .APK (Google Drive)](https://drive.google.com/file/d/1dhlJjQ3udEE-8P_SboPn-dK3yqsM-6rM/view?usp=drive_link)**
 
-*(Aucune installation nécessaire pour la version web)*
+*(Note : Lors de l'installation, votre téléphone peut demander l'autorisation d'installer des sources inconnues, c'est normal pour une app hors Play Store).*
 
 ---
 
@@ -19,7 +23,7 @@ Cette application a été pensée pour être simple, belle et instantanée.
 * **🎲 Tirage Aléatoire :** L'algorithme pioche instantanément parmi les milliers de versets de la Bible (Ancien et Nouveau Testament).
 * **🖥️ Multi-plateforme :** Conçue pour s'adapter parfaitement aux grands écrans (PC) comme aux petits (Smartphones).
 * **🖼️ Immersion Visuelle :** Chaque verset est accompagné d'un fond d'écran de haute qualité, sélectionné parmi des œuvres d'art classiques (Renaissance, gravures de Gustave Doré) et des paysages inspirants.
-* **📱 100% Hors-Ligne (App Mobile) :** Une fois installée en tant qu'application Android, elle fonctionne parfaitement sans aucune connexion internet.
+* **📱 100% Hors-Ligne (App Mobile) :** Une fois installée via l'APK, elle fonctionne parfaitement sans aucune connexion internet.
 * **🌙 Mode Lecture :** Une interface sombre avec un texte blanc et des ombres portées pour assurer une lisibilité parfaite, quel que soit l'éclairage.
 
 ## 📚 Le Contenu
