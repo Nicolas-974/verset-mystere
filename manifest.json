@@ -1,6 +1,6 @@
 {
-  "name": "Verset Surprise",
-  "short_name": "Verset ?",
+  "name": "Verset du Jour",
+  "short_name": "Verset du Jour",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
