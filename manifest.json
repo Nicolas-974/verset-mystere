@@ -1,6 +1,6 @@
 {
-  "name": "Verset du Jour",
-  "short_name": "Verset du Jour",
+  "name": "Verset Aléatoire",
+  "short_name": "Verset Aléatoire",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
