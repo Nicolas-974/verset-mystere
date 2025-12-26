@@ -10,7 +10,7 @@ Accessible directement depuis votre navigateur sans installation.
 
 ### Option 2 : Application Android (APK)
 Pour une expérience ultra-rapide et 100% hors-ligne, installez l'application sur votre téléphone.
-👉 **[Télécharger le fichier .APK (Google Drive)](https://drive.google.com/file/d/1cVRZCuixHA9z5RTdRXR7ONAJn8XgzMmR/view?usp=drive_link)**
+👉 **[Télécharger le fichier .APK (Google Drive)](https://drive.google.com/file/d/1TSlZqiDEUnBQthjnpcSVoQl8TIJmxzy8/view?usp=drive_link)**
 
 *(Note : Lors de l'installation, votre téléphone peut demander l'autorisation d'installer des sources inconnues, c'est normal pour une app hors Play Store).*
 
