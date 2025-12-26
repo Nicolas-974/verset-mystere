@@ -40,4 +40,4 @@ Initialement développée comme un site web moderne, **Verset du Jour** est une 
 ### Crédits & Ressources
 * **Texte :** Bible Louis Segond 1910 (Domaine Public).
 * **Images :** Œuvres du domaine public (Wikimedia Commons) et photographies libres (Unsplash).
-* **Concept & Développement :** Nicolas
+* **Concept & Développement :** Nicolas 
